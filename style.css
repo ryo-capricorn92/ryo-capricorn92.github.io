@@ -1,0 +1,57 @@
+.center {
+	text-align: center;
+}
+ 
+header {
+	color: #600000;
+	background: #DCC1C1;
+	font-size: 2em;
+	font-family: verdana;
+	letter-spacing: 4px;
+	font-weight: bold;
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+}
+
+#optionList {
+	text-align: center;
+}
+
+#optionList button {
+	margin: 5px 15px;
+}
+
+#currentOption button, #currentDog button {
+	margin: 5px 15px;
+}
+
+.dogCells {
+	margin: 10px 2%;
+	width: 21%;
+	display: inline-block;
+}
+
+.dogLongCells {
+	margin: 10px 2%;
+	width: 96%;
+	display: inline-block;
+}
+
+.dogHalfCells {
+	margin: 10px 2%;
+	width: 46%;
+	display: inline-block;
+}
+
+#dogList button {
+	margin: 5px 15px;
+}
+
+.inline {
+	margin: 0 auto;
+}
+
+.inline button {
+	display: inline-block;
+}

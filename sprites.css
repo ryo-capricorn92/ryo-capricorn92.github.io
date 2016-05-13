@@ -1,0 +1,240 @@
+.dogImg {
+	position: relative;
+	width: 500px;
+	height: 290px;
+}
+
+.male {
+	background: url('imgs/maleAll.png') no-repeat -15px 0;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.wolfSable {
+	background: url('imgs/maleAll.png') no-repeat -509px 0;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+
+.sable {
+	background: url('imgs/maleAll.png') no-repeat -999px 0;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.red {
+	background: url('imgs/maleAll.png') no-repeat -1489px 0;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.fawn {
+	background: url('imgs/maleAll.png') no-repeat -1982px 0;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.brindle {
+	background: url('imgs/maleAll.png') no-repeat -2476px 0;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.cream {
+	background: url('imgs/maleAll.png') no-repeat -14px -276px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.silver {
+	background: url('imgs/maleAll.png') no-repeat -509px -279px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.brindle {
+	background: url('imgs/maleAll.png') no-repeat -999px -281px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.isabella {
+	background: url('imgs/maleAll.png') no-repeat -1489px -283px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.chocolate {
+	background: url('imgs/maleAll.png') no-repeat -1993px -279px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.black {
+	background: url('imgs/maleAll.png') no-repeat -2475px -279px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.blue {
+	background: url('imgs/maleAll.png') no-repeat -15px -553px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.merle {
+	background: url('imgs/maleAll.png') no-repeat -506px -553px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.irish {
+	background: url('imgs/maleAll.png') no-repeat -1010px -553px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.piebald {
+	background: url('imgs/maleAll.png') no-repeat -1493px -559px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.redPoints {
+	background: url('imgs/maleAll.png') no-repeat -1993px -560px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.fawnPoints {
+	background: url('imgs/maleAll.png') no-repeat -2476px -560px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.creamPoints {
+	background: url('imgs/maleAll.png') no-repeat -15px -832px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.silverPoints {
+	background: url('imgs/maleAll.png') no-repeat -506px -832px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.brindlePoints {
+	background: url('imgs/maleAll.png') no-repeat -994px -847px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.silverBrindlePoints {
+	background: url('imgs/maleAll.png') no-repeat -1493px -847px;
+	width: 479px;
+	height: 267px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.brownEyes {
+	background: url('imgs/maleAll.png') no-repeat -2011px -867px;
+	width: 169px;
+	height: 171px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.blueEyes {
+	background: url('imgs/maleAll.png') no-repeat -2203px -867px;
+	width: 103px;
+	height: 98px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.amberEyes {
+	background: url('imgs/maleAll.png') no-repeat -2394px -867px;
+	width: 161px;
+	height: 149px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.blackNose {
+	background: url('imgs/maleAll.png') no-repeat -2575px -867px;
+	width: 176px;
+	height: 187px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
