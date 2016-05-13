@@ -1,0 +1,18 @@
+01) find dog
+02) find money (roll 1 - 50)
+03) find tree to climb to fetch random item (money [1 - 50], 
+	eggs, bone [used by puppies to up certain skills])
+04) find something buried ((money [1 - 50], beetle,
+	bone [used by puppies to up certain skills])
+05) find rabbit to chase (minor chance of injury, catching 
+	squirrel depends mildly on speed and agility, and 
+	gives bonus to those two abilities)
+06) find fox to chase (minor chance of injury, catching fox 
+	depends mildly on intelligence and endurance, and 
+	gives bonus to those two abilities)
+07) find wild dog to fight (minor-average chance of injury, 
+	option to keep dog or kill dog. Keep dog gives no 
+	bonus, but dog is guaranteed to have bonus stats, and 
+	more likely to roll certain recessives. Kill dog ups 
+	aggression, loyalty, and strength)
+08) find
