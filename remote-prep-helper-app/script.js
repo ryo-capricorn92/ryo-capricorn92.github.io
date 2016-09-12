@@ -49,10 +49,11 @@ var editClass = function () {
     }
     students[input.value] = students[input.name];
     delete students[input.name];
+    input.value === '' ? delete students[input.value] : null;
     window.localStorage.setItem('REMOTE_PREP_HELPER_CLASS', JSON.stringify(students));
     startup();
   }
-  var students = JSON.parse(window.localStorage.getItem('REMOTE_PREP_HELPER_CLASS'));
+  students = JSON.parse(window.localStorage.getItem('REMOTE_PREP_HELPER_CLASS'));
   $('#app').html('<table border=1><thead><tr><th>Students</th></tr><tbody id="newClassTable"></tbody></table>');
   $('#app').append('<button onclick="startup()">Back</button>');
   for (var student in students) {
@@ -111,7 +112,7 @@ var createPairs = function () {
 }
 
 var clearPairs = function () {
-  var students = JSON.parse(window.localStorage.getItem('REMOTE_PREP_HELPER_CLASS'));
+  students = JSON.parse(window.localStorage.getItem('REMOTE_PREP_HELPER_CLASS'));
   for (var student in students) {
     students[student].length = 0;
   }
