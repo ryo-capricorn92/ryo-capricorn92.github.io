@@ -54,18 +54,17 @@ var addToClass = function () {
 var editClass = function () {
   changeStudent = function () {
     var input = document.getElementById('changeStudent');
+    var name = input.name.split('XXXX');
+    name = name.join(' ');
     for (var student in students) {
       for (var i = 0; i < student.length; i++) {
-        console.log(input.name);
-        var name = input.name.split('XXXX');
-        name = name.join(' ');
-        if (student[i] === input.name) {
+        if (student[i] === name) {
           student[i] = input.value;
         }
       }
     }
-    students[input.value] = students[input.name];
-    delete students[input.name];
+    students[input.value] = students[name];
+    delete students[name];
     input.value === '' ? delete students[input.value] : null;
     window.localStorage.setItem('REMOTE_PREP_HELPER_CLASS', JSON.stringify(students));
     startup();
