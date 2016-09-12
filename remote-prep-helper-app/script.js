@@ -56,6 +56,9 @@ var editClass = function () {
     var input = document.getElementById('changeStudent');
     for (var student in students) {
       for (var i = 0; i < student.length; i++) {
+        console.log(input.name);
+        var name = input.name.split('XXXX');
+        name = name.join(' ');
         if (student[i] === input.name) {
           student[i] = input.value;
         }
@@ -71,7 +74,10 @@ var editClass = function () {
   $('#app').html('<table border=1><thead><tr><th>Students</th></tr><tbody id="newClassTable"></tbody></table>');
   $('#app').append('<button onclick="startup()">Back</button>');
   for (var student in students) {
-    $('#newClassTable').append('<tr><td id="' + student + '">' + student + '</td></tr>');
+    var realStudent = student;
+    student = student.split(' ');
+    student = student.join('XXXX');
+    $('#newClassTable').append('<tr><td id="' + student + '">' + realStudent + '</td></tr>');
     $('#' + student).on('click', function (e) {
       $('#app').append('<input id="changeStudent" name="' + e.target.id +'"/>');
       $('#app').append('<button onclick="changeStudent()">Update Student</button>');
