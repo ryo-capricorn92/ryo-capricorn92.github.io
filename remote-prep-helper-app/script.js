@@ -25,8 +25,8 @@ var createClass = function () {
   }
 
   addStudent = function () {
-    var student = $('#student').val();
-    console.log(student);
+    var student = $('#student').value;
+    $('#student').value = '';
     $('#newClassTable').append('<tr><td>' + student + '</td></tr>').addlistener;
     studentsArr.push(student);
   }
