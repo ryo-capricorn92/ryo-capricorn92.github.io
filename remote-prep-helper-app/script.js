@@ -3,7 +3,6 @@
 var submitClass, addStudent, changeStudent;
 var studentsArr = [];
 var students = {};
-var pairs = [];
 
 var startup = function () {
   $('#app').html('<button onclick="createClass()">Create new class</button>');
@@ -74,7 +73,7 @@ var clearClass = function () {
 }
 
 var createPairs = function () {
-  var students = JSON.parse(window.localStorage.getItem('REMOTE_PREP_HELPER_CLASS'));
+  students = JSON.parse(window.localStorage.getItem('REMOTE_PREP_HELPER_CLASS'));
   var studentsArr = [], pairs = [], currentPair = [];
   for (var student in students) {
     studentsArr.push(student);
@@ -93,8 +92,8 @@ var createPairs = function () {
       currentPair.push(studentsArr[j]);
       studentsArr[j] = '';
       if (currentPair.length >= 2) {
-        students[currentPair[0]].push(currentPair[1]);
-        students[currentPair[1]].push(currentPair[0]);
+        currentPair[0] !== 'SOLO' ? students[currentPair[0]].push(currentPair[1]) : null;
+        currentPair[1] !== 'SOLO' ? students[currentPair[1]].push(currentPair[0]) : null;
 
         pairs.push(currentPair.slice());
         currentPair.length = 0;
