@@ -1,12 +1,13 @@
 /* global $ */
 
-var submitClass, addStudent, changeStudent;
+var submitClass, addStudent, changeStudent, addStudentName;
 var studentsArr = [];
 var students = {};
 
 var startup = function () {
   $('#app').html('<button onclick="createClass()">Create new class</button>');
   if (window.localStorage.getItem('REMOTE_PREP_HELPER_CLASS')) {
+    $('#app').append('<button onclick="addToClass()">Add to current class</button>');
     $('#app').append('<button onclick="editClass()">Edit current class</button>');
     $('#app').append('<button onclick="clearClass()">Clear old class</button><br />');
     $('#app').append('<button onclick="createPairs()">Create new pairs</button');
@@ -35,6 +36,19 @@ var createClass = function () {
   $('#app').append('<input id="student" />');
   $('#app').append('<button onclick="addStudent()">Add Student</button>');
   $('#app').append('<button onclick="submitClass()">Submit Class</button>');
+}
+
+var addToClass = function () {
+  addStudentName = function () {
+    var input = document.getElementById('addStudentName');
+    students = JSON.parse(window.localStorage.getItem('REMOTE_PREP_HELPER_CLASS'));
+    students[input.value] = [];
+    window.localStorage.setItem('REMOTE_PREP_HELPER_CLASS', JSON.stringify(students));
+    startup();
+  }
+
+  $('#app').append('<input id="addStudentName"/>');
+  $('#app').append('<button onclick="addStudentName()">Add Student</button>');
 }
 
 var editClass = function () {
