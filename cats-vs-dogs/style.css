@@ -57,3 +57,11 @@
   position: relative;
   top: 20px;
 }
+
+@font-face {
+  font-family: "raleway";
+  src: url("./Raleway-Regular/Raleway-Regular.eot");
+  src: url("./Raleway-Regular/Raleway-Regular.eot?#iefix") format("eot"), url("./Raleway-Regular/Raleway-Regular.woff") format("woff"), url("./Raleway-Regular/Raleway-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
