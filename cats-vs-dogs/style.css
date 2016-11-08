@@ -1,0 +1,54 @@
+#container {
+  width: 90%;
+  margin: 30px auto;
+  font-family: raleway;
+}
+
+#header {
+  width: 100%;
+  padding: 15px 0px;
+  border: 1px solid gray;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#title, #subtitle {
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #808080;
+}
+
+#title {
+  font-size: 35px;
+}
+
+#subtitle * {
+  display: inline-block;
+}
+
+#subtitle img {
+  max-width: 25px;
+  margin: 0 3px;
+}
+
+#main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#card {
+  margin: 30px;
+  padding: 40px;
+  border-radius: 25px;
+  background-color: #4989dd;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+}
+
+#question {
+  width: 60%;
+  margin: 0 auto;
+}
