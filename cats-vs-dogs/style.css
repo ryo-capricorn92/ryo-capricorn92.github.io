@@ -44,11 +44,16 @@
   border-radius: 25px;
   background-color: #4989dd;
   color: #fff;
-  font-size: 25px;
+  font-size: 45px;
   text-align: center;
 }
 
 #question {
   width: 60%;
   margin: 0 auto;
+}
+
+#nextQuestion, #question {
+  position: relative;
+  top: 20px;
 }
