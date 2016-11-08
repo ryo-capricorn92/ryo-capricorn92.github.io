@@ -46,7 +46,29 @@ var newQuestion = (function () {
     { name: 'Herbivore vs Carnivore', used: false },
     { name: 'Snakes vs Spiders', used: false },
     { name: 'Manga vs Comics', used: false },
-    { name: 'Walmart vs Target', used: false }
+    { name: 'Walmart vs Target', used: false },
+    { name: 'Chicken vs Turkey', used: false },
+    { name: 'BMW vs Mercedes', used: false },
+    { name: 'iPhone vs Android', used: false },
+    { name: 'Adventure vs Action', used: false },
+    { name: 'Hugh Jackman vs Hugh Laurie', used: false },
+    { name: 'Nickelodeon vs Cartoon Network', used: false },
+    { name: 'Alaska vs Hawaii', used: false },
+    { name: 'Christmas vs New Years', used: false },
+    { name: 'Bacon vs Sausage', used: false },
+    { name: 'Strawberry vs Banana', used: false },
+    { name: 'Sweet vs Spicy', used: false },
+    { name: 'Taco vs Pizza', used: false },
+    { name: 'Fire vs Water', used: false },
+    { name: 'Steven King vs James Patterson', used: false },
+    { name: 'Horror vs Romance', used: false },
+    { name: 'Morning Bird vs Night Owl', used: false },
+    { name: 'Coffee vs Tea', used: false },
+    { name: 'Summer vs Winter', used: false },
+    { name: 'R2D2 vs BB-8', used: false },
+    { name: 'Pokemon vs Digimon', used: false },
+    { name: 'Mario vs Donkey Kong', used: false },
+    { name: 'Atronomy vs Astrology', used: false }
     // { name: '', used: false },
 
   ]
@@ -56,7 +78,7 @@ var newQuestion = (function () {
     do {
       count++;
       if (count > 200) {
-        currentQuestion = 'That\'s it!';
+        currentQuestion = 'That\'s all I got!';
         $('#question').html(currentQuestion);
         return;
       }
@@ -66,12 +88,3 @@ var newQuestion = (function () {
     currentQuestion.used = true;
   }
 })()
-
-// Hulu vs Netflix
-// Matt Damon vs Mark Whalburg
-// DC vs Marvel
-// Sushi vs Pho
-// Pirates vs Ninjas
-// Football (American) vs Football (everybody else)
-// Harry Potter vs The Hunger Games
-// Beyonce vs Britney Spears?
