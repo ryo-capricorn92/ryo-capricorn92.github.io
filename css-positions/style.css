@@ -1,0 +1,58 @@
+div {
+  border: 2px solid grey;
+  padding: 10px 30px 30px 30px;
+  /*padding: 30px;
+  padding-top: 10px;*/
+  opacity: 0.9;
+  border-radius: 30px;
+  top: 0;
+  left: 0;
+}
+
+h3, h4 {
+  display: inline-block;
+}
+
+h3 {
+  color: grey;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.orange1 {
+  z-index: 1;
+  top: 50px;
+  left: 50px;
+}
+
+.red {
+  background-color: red;
+}
+
+.redFix {
+  padding: 10px;
+}
+
+.pink {
+  background-color: pink;
+  padding: 10px;
+  top: -40px;
+}
