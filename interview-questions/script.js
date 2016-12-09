@@ -8,9 +8,8 @@ var newQuestion = function () {
     var i = Math.floor(Math.random() * questions.length);
     var question = questions[i];
     $('.question').html(question.question);
-    $('.references').hide();
     if (!question.references.length) {
-      $('.references').html('Looks like there aren\'t any references for this yet. Maybe consider adding some <a href="https://github.com/ryo-capricorn92/ryo-capricorn92.github.io">here</a>');
+      $('.references').html('Looks like there aren\'t any references for this yet. Maybe consider adding some <a href="https://github.com/ryo-capricorn92/ryo-capricorn92.github.io/tree/master/interview-questions">here</a>');
     } else {
       $('.references').html('');
       question.references.forEach(function (reference) {
