@@ -92,7 +92,9 @@ var questions = [
     references: []
   },{
     question: 'Have you used different HTML templating languages before?',
-    references: []
+    references: [
+      'http://stackoverflow.com/questions/18174856/whats-the-use-of-jade-or-handlebars-when-writing-angularjs-apps'
+    ]
   },{
     question: 'What is the difference between classes and IDs in CSS?',
     references: []
@@ -125,7 +127,9 @@ var questions = [
     references: []
   },{
     question: 'What are the different ways to visually hide content (and make it available only for screen readers)?',
-    references: []
+    references: [
+      'http://webaim.org/techniques/css/invisiblecontent/'
+    ]
   },{
     question: 'Have you ever used a grid system, and if so, what do you prefer?',
     references: []
@@ -140,7 +144,9 @@ var questions = [
     references: []
   },{
     question: 'What are some of the "gotchas" for writing efficient CSS?',
-    references: []
+    references: [
+      'https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS'
+    ]
   },{
     question: 'What are the advantages/disadvantages of using CSS preprocessors?',
     references: []
@@ -149,13 +155,18 @@ var questions = [
     references: []
   },{
     question: 'Explain how a browser determines what elements match a CSS selector.',
-    references: []
+    references: [
+      'https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS'
+    ]
   },{
     question: 'Describe pseudo-elements and discuss what they are used for.',
     references: []
   },{
     question: 'Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.',
-    references: []
+    references: [
+      'https://css-tricks.com/the-css-box-model/',
+      'https://css-tricks.com/box-sizing/'
+    ]
   },{
     question: 'What does * { box-sizing: border-box; } do? What are its advantages?',
     references: []
@@ -251,7 +262,9 @@ var questions = [
     references: []
   },{
     question: 'What\'s the difference between an "attribute" and a "property"?',
-    references: []
+    references: [
+      'http://lucybain.com/blog/2014/attribute-vs-property/'
+    ]
   },{
     question: 'Why is extending built-in JavaScript objects not a good idea?',
     references: []
@@ -281,7 +294,10 @@ var questions = [
     references: []
   },{
     question: 'What is the extent of your experience with Promises and/or their polyfills?',
-    references: []
+    references: [
+      'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise',
+      'https://github.com/taylorhakes/promise-polyfill'
+    ]
   },{
     question: 'What are the pros and cons of using Promises instead of callbacks?',
     references: []
@@ -293,10 +309,14 @@ var questions = [
     references: []
   },{
     question: 'What language constructions do you use for iterating over object properties and array items?',
-    references: []
+    references: [
+      'http://qnimate.com/foreach-vs-for-of-vs-for-in-in-javascript/'
+    ]
   },{
     question: 'Explain the difference between mutable and immutable objects.',
-    references: []
+    references: [
+      'https://www.sitepoint.com/immutability-javascript/'
+    ]
   },{
     question: 'What is an example of an immutable object in JavaScript?',
     references: []
@@ -350,28 +370,44 @@ var questions = [
     references: []
   },{
     question: 'Describe server response code 200.',
-    references: []
+    references: [
+      'https://httpstatuses.com/200'
+    ]
   },{
     question: 'Describe server response code 201.',
-    references: []
+    references: [
+      'https://httpstatuses.com/201'
+    ]
   },{
     question: 'Describe server response code 204.',
-    references: []
+    references: [
+      'https://httpstatuses.com/204'
+    ]
   },{
     question: 'Describe server response code 301.',
-    references: []
+    references: [
+      'https://httpstatuses.com/301'
+    ]
   },{
     question: 'Describe server response code 400.',
-    references: []
+    references: [
+      'https://httpstatuses.com/400'
+    ]
   },{
     question: 'Describe server response code 404.',
-    references: []
+    references: [
+      'https://httpstatuses.com/404'
+    ]
   },{
     question: 'Describe server response code 409.',
-    references: []
+    references: [
+      'https://httpstatuses.com/409'
+    ]
   },{
     question: 'Describe server response code 500.',
-    references: []
+    references: [
+      'https://httpstatuses.com/500'
+    ]
   },{
     question: 'What are some advantages of CDNs? Disadvantages?',
     references: []
@@ -383,13 +419,17 @@ var questions = [
     references: []
   },{
     question: 'Pro and cons of mutable and immutable values.',
-    references: []
+    references: [
+      'https://www.sitepoint.com/immutability-javascript/'
+    ]
   },{
     question: 'What are the tradeoffs of client-side rendering vs. server-side rendering?',
     references: []
   },{
     question: 'How would you manage the migration of a project from MySQL to PostgreSQL?',
-    references: []
+    references: [
+      'http://docs.sequelizejs.com/en/latest/docs/migrations/'
+    ]
   },{
     question: 'How is Lazy Loading achieved? When is it useful? What are its pitfalls?',
     references: []
@@ -398,7 +438,9 @@ var questions = [
     references: []
   },{
     question: 'What\'s a rebase?',
-    references: []
+    references: [
+      'https://nathanleclaire.com/blog/2014/09/14/dont-be-scared-of-git-rebase/'
+    ]
   },{
     question: 'What is the biggest difference between Agile and Waterfall?',
     references: []
@@ -429,6 +471,11 @@ var questions = [
   },{
     question: 'What are the main differences between a document database and a SQL database? Which would you consider "more efficient"?',
     references: []
+  },{
+    question: 'What will the .length property return on a function?',
+    references: [
+      'https://repl.it/EqFw/1'
+    ]
   }
   // {
   //   question: '',
