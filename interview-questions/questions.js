@@ -112,7 +112,9 @@ var questions = [
     references: []
   },{
     question: 'What are the various clearing techniques and which is appropriate for what context?',
-    references: []
+    references: [
+      'https://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/'
+    ]
   },{
     question: 'Explain CSS sprites, and how you would implement them on a page or site.',
     references: []
@@ -172,7 +174,9 @@ var questions = [
     references: []
   },{
     question: 'List as many values for the display property that you can remember.',
-    references: []
+    references: [
+      'https://developer.mozilla.org/en-US/docs/Web/CSS/display#Values'
+    ]
   },{
     question: 'What\'s the difference between inline and inline-block?',
     references: []
@@ -413,7 +417,9 @@ var questions = [
     references: []
   },{
     question: 'What is a reverse proxy?',
-    references: []
+    references: [
+      'http://stackoverflow.com/questions/224664/difference-between-proxy-server-and-reverse-proxy-server'
+    ]
   },{
     question: 'Why Functional Programming matters? When should a functional programming language be used?',
     references: []
