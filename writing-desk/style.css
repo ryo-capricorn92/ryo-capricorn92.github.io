@@ -1,0 +1,54 @@
+.button-holder {
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+
+.button-holder button {
+  display: inline-block;
+  outline: 0;
+  appearance: none;
+  padding: 0px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgb(249, 251, 250);
+  border: 1px solid rgb(137, 151, 155);
+  box-shadow: rgb(6 22 33 / 30%) 0px 1px 2px;
+  color: rgb(61, 79, 88);
+  font-size: 14px;
+  font-weight: 400;
+  height: 36px;
+  transition: all 150ms ease-in-out 0s;
+  :hover {
+      color: rgb(61, 79, 88);
+      background-color: rgb(255, 255, 255);
+      border: 1px solid rgb(93, 108, 116);
+      box-shadow: rgb(0 0 0 / 30%) 0px 4px 4px, rgb(231 238 236) 0px 0px 0px 3px;
+  }
+}
+
+.button-holder button:first-of-type {
+  border: 0px solid transparent;
+  background-color: rgb(9, 128, 76);
+  box-shadow: rgb(19 170 82 / 40%) 0px 2px 3px;
+  color: rgb(255, 255, 255);
+  :hover {
+      color: rgb(255, 255, 255);
+      background-color: rgb(17, 97, 73);
+      border: 0px solid transparent;
+      box-shadow: rgb(19 170 82 / 40%) 0px 2px 3px, rgb(195 231 202) 0px 0px 0px 3px;
+  }
+}
+
+.ql-container {
+  height: calc(100vh - 140px);
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  & p {
+    margin: 1.286em auto;
+  }
+}
+
+.ql-editor {
+  padding: calc(20px - 1.286em) 20px 20px 20px;
+}
