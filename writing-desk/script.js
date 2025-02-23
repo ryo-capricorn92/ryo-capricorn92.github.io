@@ -2,12 +2,24 @@ const quill = new Quill('#editor', { theme: 'snow' });
 
 // eslint-disable-next-line no-unused-vars
 const deltaToString = (ops) => {
+  let floating = false;
+
   const acc = ops.reduce(({ attrs, text }, { attributes, insert }, i) => {
+    if (insert && !insert.replace(/\n/, '').length) {
+      floating = true;
+      return { attrs, text };
+    }
+
     let converted = text;
-    // let blockquote = false;
     const last = i === (ops.length - 1);
 
-    insert.split('\n').forEach((str, n, arr) => {
+    let fixed = insert;
+    if (floating) {
+      floating = false;
+      fixed = `\n${fixed}`;
+    }
+
+    fixed.split('\n').forEach((str, n, arr) => {
       if (!str) { return; }
       const nLast = n === (arr.length - 1);
 
@@ -92,6 +104,8 @@ const copyForAO3 = () => {
   const delta = quill.getContents();
   const formatted = deltaToString(delta.ops);
   navigator.clipboard.writeText(formatted);
+  // console.log(delta);
+  // console.log(formatted);
 };
 
 // eslint-disable-next-line no-unused-vars
