@@ -3,12 +3,13 @@
   "parserOptions": {
     "ecmaVersion": "latest"
   },
+  "plugins": ["jest"],
+  "env": {
+    "jest/globals": true,
+    "browser": true
+  },
   "globals": {
-    "describe": true,
-    "it": true,
-    "expect": true,
-    "Quill": true,
-    "navigator": true
+    "Quill": true
   },
   "rules": {
     "no-underscore-dangle": ["error", { "allow": ["_id"] }],
