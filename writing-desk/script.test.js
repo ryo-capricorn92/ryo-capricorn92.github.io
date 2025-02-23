@@ -116,6 +116,23 @@ describe('writing-desk', () => {
       expect(result).toBe(expected);
     });
 
+    it('should handle floating paragraphs', () => {
+      const ops = [{
+        insert: 'a paragraph',
+      }, {
+        insert: '\n',
+      }, {
+        insert: 'another paragraph',
+      }];
+      const expected = `<p>a paragraph</p>
+
+<p>another paragraph</p>`;
+
+      const script = new vm.Script(getScript(ops));
+      const result = script.runInContext(context);
+      expect(result).toBe(expected);
+    });
+
     it('should handle styles over multiple paragraphs', () => {
       const ops = [{
         insert: 'Some ',
