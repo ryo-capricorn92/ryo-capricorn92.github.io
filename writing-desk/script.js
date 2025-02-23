@@ -4,7 +4,7 @@ const quill = new Quill('#editor', { theme: 'snow' });
 const deltaToString = (ops) => {
   const acc = ops.reduce(({ attrs, text }, { attributes, insert }, i) => {
     let converted = text;
-    let blockquote = false;
+    // let blockquote = false;
     const last = i === (ops.length - 1);
 
     insert.split('\n').forEach((str, n, arr) => {
@@ -13,19 +13,8 @@ const deltaToString = (ops) => {
 
       // don't close a paragraph tag for the first entry
       if (n) {
-        // if this comes after a \n, end the paragraph first
-        converted += '</p>';
-        // if this last paragraph was in a blockquote, close it
-        if (attrs.blockquote) {
-          converted += '</blockquote>';
-        }
-        // if this new paragraph has a blockquote indicator, add the bq tag
-        if (str.startsWith('---')) {
-          converted += '<blockquote>';
-          blockquote = true;
-        }
-        // now we can start the new paragraph
-        converted += '<p>';
+        // if this comes after a \n, end the paragraph and start a new one
+        converted += '</p><p>';
       }
 
       // open style tags
@@ -37,7 +26,7 @@ const deltaToString = (ops) => {
       }
 
       // add the raw text
-      converted += str.replace(/---/g, '');
+      converted += str;
 
       // close style tags
       if (attributes?.italic && attributes?.bold) {
@@ -53,18 +42,9 @@ const deltaToString = (ops) => {
         converted += '</b>';
       }
 
-      // onle close the style tags if
-      // 1) we're not on the last paragraph of this insert
-      // 1) we are on the last insert (ie, end of page)
-      // 2) we're not on the last paragraph of a multi-paragraph insert
-      const shouldClose = last || (n && !nLast);
       // ending paragraph tag should only be added to the last insert of the last paragraph
-      if ((last && nLast) || (n && !nLast)) {
+      if (last && nLast) {
         converted += '</p>';
-      }
-      // blockquote follows style rules
-      if (shouldClose && blockquote) {
-        converted += '</blockquote>';
       }
     });
 
@@ -72,16 +52,15 @@ const deltaToString = (ops) => {
       attrs: {
         italic: !!attributes?.italic,
         bold: !!attributes?.bold,
-        blockquote,
       },
       text: converted,
     };
   }, {
-    attrs: { italic: false, bold: false, blockquote: false },
+    attrs: { italic: false, bold: false },
     text: '<p>',
   });
 
-  return acc.text
+  const formatted = acc.text
     .replace(/<(p|i|b)>\s/g, (found, el) => ` <${el}>`) // whitespace should go before opening tag;
     .replace(/<(p|i|b)>\s/g, (found, el) => ` <${el}>`) // and again for nested styles
     .replace(/\s<\/(p|i|b)>/g, (found, el) => `</${el}> `) // whitespace should go after closing tag
@@ -89,10 +68,23 @@ const deltaToString = (ops) => {
     .replace(/(<\/?p>)\s+/g, (found, el) => el) // empty spaces after paragraph tags are never needed
     .replace(/<\/(i|b)>(\s*(<[ib]>)?)<\1>/g, (found, el, space) => space) // no redundant style tagging
     .replace(/<(p|i|b)>(<br>)*<\/(\1)>/g, '') // no empty tags/blank lines
-    .replace(/<\/p><(p|blockquote)>/g, (found, el) => `</p>
+    .replace(/<\/p><p>/g, `</p>
 
-<${el}>`) // new lines between paragraphs are aesthetically pleasing
+<p>`) // new lines between paragraphs are aesthetically pleasing
     .replace(/<p>~+<\/p>/g, '<br /><hr /><br />'); // use real page breaks
+
+  return formatted.split(`
+
+`)
+    .map((line) => {
+      if (line.includes('---')) {
+        return `<blockquote>${line.replace(/---/g, '')}</blockquote>`;
+      }
+      return line;
+    })
+    .join(`
+
+`);
 };
 
 // eslint-disable-next-line no-unused-vars
