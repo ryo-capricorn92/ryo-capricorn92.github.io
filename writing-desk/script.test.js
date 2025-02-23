@@ -99,6 +99,23 @@ describe('writing-desk', () => {
       expect(result).toBe(expected);
     });
 
+    it('should handle new paragraphs', () => {
+      const ops = [{
+        insert: 'A paragraph.\nAnother paragraph\nAnd another\n\nAn unnecessarily spaced paragraph.',
+      }];
+      const expected = `<p>A paragraph.</p>
+
+<p>Another paragraph</p>
+
+<p>And another</p>
+
+<p>An unnecessarily spaced paragraph.</p>`;
+
+      const script = new vm.Script(getScript(ops));
+      const result = script.runInContext(context);
+      expect(result).toBe(expected);
+    });
+
     it('should handle styles over multiple paragraphs', () => {
       const ops = [{
         insert: 'Some ',
@@ -151,7 +168,76 @@ describe('writing-desk', () => {
       expect(result).toBe(expected);
     });
 
-    it.todo('should handle page breaks');
-    it.todo('should handle blockquotes');
+    it('should handle page breaks', () => {
+      const ops = [{
+        insert: 'Some random first paragraph with a ',
+      }, {
+        attributes: { italic: true },
+        insert: 'bit ',
+      }, {
+        insert: 'of emphasis.\n~~~\nAnd another paragraph.',
+      }];
+      const expected = `<p>Some random first paragraph with a <i>bit</i> of emphasis.</p>
+
+<br /><hr /><br />
+
+<p>And another paragraph.</p>`;
+
+      const script = new vm.Script(getScript(ops));
+      const result = script.runInContext(context);
+      expect(result).toBe(expected);
+    });
+
+    it('should handle blockquotes', () => {
+      const ops = [{
+        insert: '---indented baby',
+      }];
+      const expected = '<blockquote><p>indented baby</p></blockquote>';
+
+      const script = new vm.Script(getScript(ops));
+      const result = script.runInContext(context);
+      expect(result).toBe(expected);
+    });
+
+    it('should handle simple blockquotes', () => {
+      const ops = [{
+        insert: 'Paragraph\n---Something blockquoted\nAnother paragraph',
+      }];
+      const expected = `<p>Paragraph</p>
+
+<blockquote><p>Something blockquoted</p></blockquote>
+
+<p>Another paragraph</p>`;
+
+      const script = new vm.Script(getScript(ops));
+      const result = script.runInContext(context);
+      expect(result).toBe(expected);
+    });
+
+    it('should handle styled blockquotes', () => {
+      const ops = [{
+        attributes: { bold: true },
+        insert: 'a bold starter',
+      }, {
+        attributes: { bold: true, italic: true },
+        insert: ' with an emphatic end',
+      }, {
+        insert: '\n---An indented bit with a ',
+      }, {
+        attributes: { italic: true },
+        insert: 'bit',
+      }, {
+        insert: ' of emphasis\nbefore the end',
+      }];
+      const expected = `<p><b>a bold starter <i>with an emphatic end</i></b></p>
+
+<blockquote><p>An indented bit with a <i>bit</i> of emphasis</p></blockquote>
+
+<p>before the end</p>`;
+
+      const script = new vm.Script(getScript(ops));
+      const result = script.runInContext(context);
+      expect(result).toBe(expected);
+    });
   });
 });
